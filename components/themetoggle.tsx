@@ -12,14 +12,24 @@ export function ModeToggle(){
   return(
     <Card 
       size="sm"
-      className="mx-auto w-full max-w-sm border-2"
+      className="mx-auto w-full max-w-sm border-2"    
     >
       <CardHeader>
         <CardTitle>Theme Mode Toggle</CardTitle>
         <CardDescription>
-          I was sure there was a more efficient way of writing a theme toggle, so here it is.
+          Click to change themes!
         </CardDescription>
+
+        <CardAction>
+          <div className="italic">4/5/26</div>
+        </CardAction>
+
       </CardHeader>
+
+      <CardContent>
+        I was sure there was a more efficient way of writing a theme toggle, so here it is.
+      </CardContent>
+
 
       <CardFooter> 
         <Button 
@@ -29,7 +39,7 @@ export function ModeToggle(){
           I do things
         </Button>
       </CardFooter>
-
+    
 
     </Card>
 

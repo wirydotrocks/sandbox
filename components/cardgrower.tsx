@@ -16,10 +16,19 @@ export function CardGrower(){
       <CardHeader>  
         <CardTitle>This Card Grows </CardTitle>
         <CardDescription>
-          I learned how to edit the parent of a button, and I used an array destructor.
-          Also, I learned how to use inline css to be changed by onClicks.
+          Click the buttons to change card size!
         </CardDescription>
+
+        <CardAction>
+          <div className="italic">4/6/26</div>
+        </CardAction>
+
       </CardHeader>
+
+      <CardContent>
+        I learned how to edit the parent of a button, and I used an array destructor.
+        Also, I learned how to use inline css to be changed by onClicks.
+      </CardContent>
 
       <CardFooter
         style={{
