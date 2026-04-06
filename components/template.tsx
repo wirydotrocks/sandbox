@@ -1,0 +1,45 @@
+"use client"
+
+import { useState } from "react"
+import { Button } from "@/components/ui/button"
+import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+
+
+export function Template(){
+
+  return(
+    <Card 
+      className="mx-auto w-full max-w-sm border-2 min-h-30"
+    >
+      <CardHeader>  
+        <CardTitle>Template Card</CardTitle>
+        <CardDescription>
+          Template Card...
+        </CardDescription>
+
+        <CardAction>
+          <div className="italic">4/6/26</div>
+        </CardAction>
+
+      </CardHeader>
+
+      <CardContent>
+        It's empty.
+      </CardContent>
+
+      <CardFooter
+        className="flex gap-4"
+      > 
+ 
+      </CardFooter>
+
+
+    </Card>
+
+
+
+
+  )
+
+}
+
