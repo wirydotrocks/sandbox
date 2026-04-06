@@ -11,10 +11,15 @@ export default function Home() {
 
   return (
     <div 
-      className="flex min-h-svh items-center justify-center font-mono grid grid-cols-4 grid-rows-4 gap-4" 
+      className="min-h-svh items-center justify-center font-mono grid grid-cols-4 grid-rows-4 gap-4 items-start" 
     >
 
-      <Template/>
+      <div className="mb-4"><Template/></div>
+      <div className="mb-4"><ModeToggle/></div>
+      <div className="mb-4"><CardGrower/></div>
+      <div className="mb-4"><Template/></div>
+      <div className="mb-4"><Template/></div>
+      <div className="mb-4"><Template/></div>
       <ModeToggle/>
       <CardGrower/>
       
