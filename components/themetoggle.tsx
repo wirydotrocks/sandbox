@@ -2,17 +2,36 @@
 
 import * as React from "react"
 import { useTheme } from "next-themes"
-import { Card, Button } from "@/components/ui/button"
-
+import { Button } from "@/components/ui/button"
+import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 
 
 export function ModeToggle(){
   const { setTheme, resolvedTheme } = useTheme()
 
   return(
-    <Button onClick={() => setTheme(resolvedTheme === "dark" ? "light":"dark")}>
-      deez
-    </Button>
+    <Card 
+      size="sm"
+      className="mx-auto w-full max-w-sm border-2"
+    >
+      <CardHeader>
+        <CardTitle>Theme Mode Toggle</CardTitle>
+        <CardDescription>
+          I was sure there was a more efficient way of writing a theme toggle, so here it is.
+        </CardDescription>
+      </CardHeader>
+
+      <CardFooter> 
+        <Button 
+          onClick={() => setTheme(resolvedTheme === "dark" ? "light":"dark")}
+          className="w-full"
+        >
+          I do things
+        </Button>
+      </CardFooter>
+
+
+    </Card>
 
 
 
