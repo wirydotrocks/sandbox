@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 
 
-export function Masonry(){
+export function MasonryCard(){
 
   return(
     <Card 
@@ -25,13 +25,13 @@ export function Masonry(){
 
       <CardContent>
         Added Masonry to this site. It was a Google away...
-        Reminder: Each col is its own masonry bit.
+        Used the react-responsive-masonry library.
       </CardContent>
 
       <CardFooter>
         <a 
         className="hover:underline italic"
-        href="https://flowbite.com/docs/components/gallery/#masonry-grid"
+        href="https://www.npmjs.com/package/react-responsive-masonry"
         target="_blank"
         rel="noopener noreferrer"
         >Link to information...</a>

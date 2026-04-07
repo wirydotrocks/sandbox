@@ -1,10 +1,13 @@
 'use client'
 
+import React from "react"
+import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
+
 
 import { Template } from '@/components/template';
 import { ModeToggle } from '@/components/themetoggle';
 import { CardGrower } from '@/components/cardgrower';
-import { Masonry } from '@/components/masonry';
+import { MasonryCard } from '@/components/masonry';
 import { PersonaButton } from '@/components/personabutton';
 
 
@@ -13,30 +16,24 @@ export default function Home() {
 
   return (
 
-    <div className="grid grid-cols2 md:grid-cols-4 gap-4 font-mono p-10">
 
-      <div className="grid gap-2">
-        <div><Template/></div>
-        <div><PersonaButton/></div>
-      </div>
-
-      <div className="grid gap-2">
-        <div><ModeToggle/></div>
-      </div>
-
-      <div className="grid gap-2">
-        <div><CardGrower/></div>
-      </div>
-
-      <div className="grid gap-2">
-        <div><Masonry/></div>
-        <div><ModeToggle/></div>
-        <div><CardGrower/></div>
-        <div><Template/></div>
-      </div>
+    <ResponsiveMasonry
+      className="font-mono p-10"
+      columnsCountBreakPoints={{350: 1, 750: 2, 900: 3, 1200: 4, 1536: 5}}
+      gutterBreakpoints={{350: "12px", 750: "16px", 900: "24px"}}
+    >
+      <Masonry>
+        <Template/>
+        <ModeToggle/>
+        <CardGrower/>
+        <MasonryCard/>
+        <PersonaButton/>
+      </Masonry>
+    </ResponsiveMasonry>
 
 
-    </div>
+   
+
 
 
 
