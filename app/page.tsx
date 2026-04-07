@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import React from "react"
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
@@ -9,6 +9,7 @@ import { ModeToggle } from '@/components/themetoggle';
 import { CardGrower } from '@/components/cardgrower';
 import { MasonryCard } from '@/components/masonry';
 import { PersonaButton } from '@/components/personabutton';
+import { SpinningSquare } from '@/components/spinningsquare';
 
 
 export default function Home() {
@@ -28,6 +29,7 @@ export default function Home() {
         <CardGrower/>
         <MasonryCard/>
         <PersonaButton/>
+        <SpinningSquare/>
       </Masonry>
     </ResponsiveMasonry>
 

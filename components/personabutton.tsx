@@ -18,14 +18,14 @@ export function PersonaButton(){
         </CardDescription>
 
         <CardAction>
-          <div className="italic">4/6/26</div>
+          <div className="italic">4/7/26</div>
         </CardAction>
 
       </CardHeader>
 
       <CardContent>
-        It's empty.
-      </CardContent>
+
+          </CardContent>
 
       <CardFooter
         className="flex gap-4"
