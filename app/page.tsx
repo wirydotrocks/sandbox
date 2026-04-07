@@ -5,6 +5,7 @@ import { Template } from '@/components/template';
 import { ModeToggle } from '@/components/themetoggle';
 import { CardGrower } from '@/components/cardgrower';
 import { Masonry } from '@/components/masonry';
+import { PersonaButton } from '@/components/personabutton';
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
 
       <div className="grid gap-2">
         <div><Template/></div>
+        <div><PersonaButton/></div>
       </div>
 
       <div className="grid gap-2">
