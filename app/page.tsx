@@ -4,26 +4,40 @@
 import { Template } from '@/components/template';
 import { ModeToggle } from '@/components/themetoggle';
 import { CardGrower } from '@/components/cardgrower';
+import { Masonry } from '@/components/masonry';
 
 
 export default function Home() {
 
 
   return (
-    <div 
-      className="min-h-svh items-center justify-center font-mono grid grid-cols-4 grid-rows-4 gap-4 items-start" 
-    >
 
-      <div className="mb-4"><Template/></div>
-      <div className="mb-4"><ModeToggle/></div>
-      <div className="mb-4"><CardGrower/></div>
-      <div className="mb-4"><Template/></div>
-      <div className="mb-4"><Template/></div>
-      <div className="mb-4"><Template/></div>
-      <ModeToggle/>
-      <CardGrower/>
-      
+    <div className="grid grid-cols2 md:grid-cols-4 gap-4 font-mono p-10">
+
+      <div className="grid gap-2">
+        <div><Template/></div>
+      </div>
+
+      <div className="grid gap-2">
+        <div><ModeToggle/></div>
+      </div>
+
+      <div className="grid gap-2">
+        <div><CardGrower/></div>
+      </div>
+
+      <div className="grid gap-2">
+        <div><Masonry/></div>
+        <div><ModeToggle/></div>
+        <div><CardGrower/></div>
+        <div><Template/></div>
+      </div>
+
 
     </div>
+
+
+
+
   )
 }
