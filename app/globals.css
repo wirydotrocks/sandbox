@@ -131,7 +131,7 @@
   
 @font-face {
   font-family: "P3R";
-  src: url("/fonts/FOT-Rodin-Pro") format("opentype");
+  src: url("/fonts/FOT-Rodin-Pro.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
