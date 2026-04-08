@@ -10,14 +10,20 @@ function MenuButton({
   pinkClassName = "", 
   whiteClassName = "", 
   size = 1,
+  blueHue = "",
 }) {
 
   const [hovered, setHovered] = useState(false)
 
+  const playSound = () => {
+    const audio = new Audio('/sounds/deck_ui_navigation.wav')
+    audio.play()
+  }
+
   const pinkVariants = {
     rest: { 
       opacity: 0, 
-      scale: size * 1.8,
+      scale: 1.8,
       transition: {
         opacity: { duration: 0, delay: 0 },
         scale: { duration: 2, ease: "easeOut" }
@@ -25,7 +31,7 @@ function MenuButton({
     },
     hover: { 
       opacity: 1, 
-      scale: size * 1.1,
+      scale: 1.1,
       transition: {
         opacity: { duration: 0, delay: 0 },
         scale: { duration: .15, ease: "backOut" }
@@ -34,13 +40,24 @@ function MenuButton({
   }
 
   const whiteVariants = {
-    rest: { opacity: 0, transition: { duration: 0, delay: 0 }},
-    hover: { opacity: 1, transition: { duration: 0 }},
+    rest: { 
+      opacity: 0, 
+      transition: 
+        { duration: 0, 
+          delay: 0,
+      }},
+    hover: 
+      { 
+        scale: 1,
+        opacity: 1, 
+        transition: { 
+          duration: 0, 
+        }},
   }
 
   const textVariants = {
     rest: { 
-      color: "#80CAFF", 
+      color: `${blueHue}`, 
       mixBlendMode: "normal",
       scale: size,
       transition: {
@@ -49,9 +66,9 @@ function MenuButton({
       },
     },
     hover: { 
-      color: "#FF0019", 
+      color: "#FF0003", 
       mixBlendMode: "multiply", 
-      scale: size * 1.3,
+      scale: 1.3,
       transition: {
         color: { duration: 0 },
         scale: { duration: .22, ease: [.34, 3, .64, 1] }
@@ -61,7 +78,8 @@ function MenuButton({
 
 
   return (
-    <div className={`absolute ${className}`} >
+    <div className={`absolute ${className}`} 
+    >
       <motion.span
 
         style={{ scale: size }}
@@ -69,7 +87,7 @@ function MenuButton({
 
         animate={hovered ? "hover" : "rest"}
 
-        className={`pointer-events-none absolute z-10 bg-[#ff93e2]
+        className={`pointer-events-none absolute z-10 bg-[#FF92ED]
                   [clip-path:polygon(100%_44%,4%_44%,88%_67%)]
                   ${pinkClassName} inset-0`}
       />
@@ -87,7 +105,7 @@ function MenuButton({
       <motion.span
 
         style={{ scale: size }}
-        onHoverStart={() => setHovered(true)}
+        onHoverStart={() => { setHovered(true); playSound() }}
         onHoverEnd={() => setHovered(false)}
 
         animate={hovered ? "hover" : "rest"}
@@ -124,29 +142,56 @@ export function PersonaButton() {
         <div className="relative h-60 w-full"
               style={{ background: 'multiply' }}
         >
-          <span className="absolute inset-0 -inset-x-6 bg-gradient-to-t from-[#2445ff] via-[#4275ff]"/>
+          <span className="absolute inset-0 -inset-x-6 bg-gradient-to-t from-[#0B2DC5] via-[#3BAAFF]"/>
            
           <MenuButton label="SKILL" 
              className="w-full h-full top-0"
              size={1}
-             textClassName="translate-x-13 translate-y-22 -rotate-20"
-             pinkClassName="-rotate-20"
-             whiteClassName="-rotate-24"
+             textClassName="translate-x-13 translate-y-12 -rotate-20"
+             pinkClassName="-translate-y-10 -rotate-20"
+             whiteClassName="-translate-y-10 -rotate-24"
+             blueHue={`#69F4FF`}
           />
 
+          <MenuButton label="EQUIP" 
+             className="w-full h-full top-14"
+             size={.8}
+             textClassName="translate-x-10 translate-y-16 -rotate-16"
+             pinkClassName="-translate-y-7 -rotate-22"
+             whiteClassName="-translate-y-7 -rotate-23"
+             blueHue={`#66E7FD`}
+          />
+          
           <MenuButton label="ITEM" 
              className="w-full h-full top-14"
-             size={.6}
-             textClassName="translate-x-23 translate-y-16 -rotate-7"
-             pinkClassName="-translate-y-15"
-             whiteClassName="-translate-y-17"
+             size={.7}
+             textClassName="translate-x-20 translate-y-6 -rotate-10"
+             pinkClassName="-translate-y-17 -rotate-14"
+             whiteClassName="-translate-y-17 -rotate-17"
+             blueHue={`#0ACCFF`}
           />
+
+          <MenuButton label="PERSONA" 
+             className="w-full h-full top-14"
+             size={.8}
+             textClassName="translate-x-1 translate-y-26 -rotate-16"
+             pinkClassName="translate-y-3 -rotate-22"
+             whiteClassName="translate-y-3 -rotate-23"
+             blueHue={`#66E7FD`}
+          />
+  
 
         </div>
 
       </CardContent>
 
-      <CardFooter className="flex gap-4" /> 
+      <CardFooter className="flex gap-4"> 
+        This was very difficult to make.
+        Scaling the website will break it a little,
+        and I also havent added hierarchy.
+        Obviously this sort of UI is best with a controller
+        so its kinda hard to hover over ITEM.
+      </CardFooter>
 
     </Card>
   )
