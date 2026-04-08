@@ -47,7 +47,13 @@ const textVariants = {
   },
 }
 
-function MenuButton({ label, className = "", textClassName = "", pinkClassName = "", whiteClassName = "", }) {
+function MenuButton({ 
+  label, 
+  className = "", 
+  textClassName = "", 
+  pinkClassName = "", 
+  whiteClassName = "", 
+}) {
   const [hovered, setHovered] = useState(false)
 
   return (
