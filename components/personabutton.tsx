@@ -157,7 +157,7 @@ export function PersonaButton() {
              className="w-full h-full top-14"
              size={.8}
              textClassName="translate-x-10 translate-y-16 -rotate-16"
-             pinkClassName="-translate-y-7 -rotate-22"
+             pinkClassName="-translate-y-7 -rotate-20"
              whiteClassName="-translate-y-7 -rotate-23"
              blueHue={`#66E7FD`}
           />
@@ -175,7 +175,7 @@ export function PersonaButton() {
              className="w-full h-full top-14"
              size={.8}
              textClassName="translate-x-1 translate-y-26 -rotate-16"
-             pinkClassName="translate-y-3 -rotate-22"
+             pinkClassName="translate-y-3 -rotate-20"
              whiteClassName="translate-y-3 -rotate-23"
              blueHue={`#66E7FD`}
           />
@@ -198,6 +198,14 @@ export function PersonaButton() {
           className="mt-2"
         >Obviously this sort of UI is best with a controller
         so its kinda hard to hover over ITEM.</p>
+
+        <p
+          className="mt-2"
+        >For those that don't know, this is P3R's main menu screen. It is designed in such a way to look like sinking stuff in water.</p>
+
+        <p
+          className="mt-2"
+        >This is just a snippit of part of that menu screen that I decided to recreate.</p>
 
         <p
           className="mt-2"
