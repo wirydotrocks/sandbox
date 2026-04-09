@@ -10,6 +10,7 @@ import { CardGrower } from '@/components/cardgrower';
 import { MasonryCard } from '@/components/masonry';
 import { PersonaButton } from '@/components/personabutton';
 import { SpinningSquare } from '@/components/spinningsquare';
+import { VolumeSlider } from '@/components/volumeslider';
 
 
 export default function Home() {
@@ -30,6 +31,7 @@ export default function Home() {
         <MasonryCard/>
         <PersonaButton/>
         <SpinningSquare/>
+        <VolumeSlider/>
       </Masonry>
     </ResponsiveMasonry>
 

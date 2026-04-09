@@ -2,6 +2,7 @@
 import { useState } from "react"
 import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { motion } from "motion/react"
+import { playSoundFile } from "@/lib/audio"
 
 function MenuButton({ 
   label, 
@@ -16,8 +17,7 @@ function MenuButton({
   const [hovered, setHovered] = useState(false)
 
   const playSound = () => {
-    const audio = new Audio('/sounds/deck_ui_navigation.wav')
-    audio.play()
+    playSoundFile('/sounds/deck_ui_navigation.wav')
   }
 
   const pinkVariants = {
@@ -191,6 +191,7 @@ export function PersonaButton() {
         and I also havent added hierarchy.
         Obviously this sort of UI is best with a controller
         so its kinda hard to hover over ITEM.
+        However, I did end up doing more than what I said for Spinning Square.
       </CardFooter>
 
     </Card>
