@@ -5,7 +5,7 @@ import { motion } from "motion/react"
 import { playSoundFile } from "@/lib/audio"
 
 function MenuButton({ 
-  label, 
+  label = "", 
   className = "", 
   textClassName = "", 
   pinkClassName = "", 
