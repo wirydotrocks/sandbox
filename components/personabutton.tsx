@@ -187,7 +187,7 @@ export function PersonaButton() {
 
       <CardFooter className="flex gap-4"> 
         This was very difficult to make.
-        Scaling the website will break it a little,
+        Scaling the website will break it a little (so diff resolutions will make it look off)
         and I also havent added hierarchy.
         Obviously this sort of UI is best with a controller
         so its kinda hard to hover over ITEM.
