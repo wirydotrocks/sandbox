@@ -71,7 +71,7 @@ function MenuButton({
       scale: 1.3,
       transition: {
         color: { duration: 0 },
-        scale: { duration: .22, ease: [.34, 3, .64, 1] }
+        scale: { duration: .22, ease: [.34, 3, .64, 1] as [number, number, number, number] }
       },
     },
   }
