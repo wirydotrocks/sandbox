@@ -26,7 +26,7 @@ function MenuButton({
       scale: 1.8,
       transition: {
         opacity: { duration: 0, delay: 0 },
-        scale: { duration: 2, ease: "easeOut" }
+        scale: { duration: 2, ease: "easeOut" as const}
       }
     },
     hover: { 
@@ -34,7 +34,7 @@ function MenuButton({
       scale: 1.1,
       transition: {
         opacity: { duration: 0, delay: 0 },
-        scale: { duration: .15, ease: "backOut" }
+        scale: { duration: .15, ease: "backOut" as const}
       }
     },
   }
@@ -62,7 +62,7 @@ function MenuButton({
       scale: size,
       transition: {
         color: { duration: 0 },
-        scale: { duration: .1, ease: "easeOut" }
+        scale: { duration: .1, ease: "easeOut" as const}
       },
     },
     hover: { 
