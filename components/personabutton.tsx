@@ -185,13 +185,39 @@ export function PersonaButton() {
 
       </CardContent>
 
-      <CardFooter className="flex gap-4"> 
-        This was very difficult to make.
-        Scaling the website will break it a little (so diff resolutions will make it look off)
-        and I also havent added hierarchy.
-        Obviously this sort of UI is best with a controller
-        so its kinda hard to hover over ITEM.
-        However, I did end up doing more than what I said for Spinning Square.
+      <CardFooter className="block gap-4 overflow-y-auto max-h-48"> 
+        <p
+        >This was very difficult to make.</p>
+
+        <p
+          className="mt-2"
+        >Scaling the website will break it a little (so diff resolutions will make it look off)
+        and I also havent added hierarchy.</p>
+
+        <p
+          className="mt-2"
+        >Obviously this sort of UI is best with a controller
+        so its kinda hard to hover over ITEM.</p>
+
+        <p
+          className="mt-2"
+        >However, I did end up doing more than what I said for Spinning Square.</p>
+
+        <p
+          className="mt-2"
+        >I was inspired to make this because I saw this girl with a super vibe coded P3R website
+        and it annoyed me.</p>
+
+        <p 
+          className="mt-2"
+        >(She didn't even use the right font, she let AI decide which font to use, it's a Google away man).</p>
+
+        <p
+          className="mt-2"
+        >
+        Then, I had the idea to learn how to use Motion, and also try out some Frontend design with P3R, which is how we got to here.</p>
+
+
       </CardFooter>
 
     </Card>

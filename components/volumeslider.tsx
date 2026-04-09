@@ -8,7 +8,7 @@ import { setMasterVolume } from "@/lib/audio"
 
 export function VolumeSlider(){ 
 
-  const [volume, setVolume] = useState(50)
+  const [volume, setVolume] = useState(10)
 
   return(
     <Card 
@@ -28,10 +28,13 @@ export function VolumeSlider(){
 
       <CardContent>
 
+      <p 
+        className="pb-5"
+      >
         NGL used LOTS Of Claude on this one. I hate backend.
-        However, what I did learn from it goes as follows:
+        However, what I did learn from it goes as follows:</p>
         <ul
-          className="pb-10">
+          className="overflow-y-auto max-h-25">
           <li>- getAudio() is used to wait for something to call it in browser.</li>
           <li>- setMasterVolume takes the number from 0-100 and ocnvers it to 0-1 and sends it (literally divides by 100 in the function)</li> 
           <li>- The rest converts the file to an arrayBuffer and decodes it to an audioBuffer, where the API can understand it, loads buffer, connects to gain node, and plays it. async/await is just how you handle things that take time in JS.</li>
@@ -43,7 +46,7 @@ export function VolumeSlider(){
           value={[volume]}
           max={100}
           step={1}
-          className="mx-auto w-full max-w-xs"
+          className="mx-auto w-full max-w-xs pt-10"
           onValueChange={([v]) => {
             setVolume(v)
             setMasterVolume(v)
@@ -54,11 +57,6 @@ export function VolumeSlider(){
 
       </CardContent>
 
-      <CardFooter
-        className="flex gap-4"
-      > 
- 
-      </CardFooter>
 
 
     </Card>
